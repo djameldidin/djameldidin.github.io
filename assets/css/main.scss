@@ -6,3 +6,8 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* --- أضف الكود التالي هنا --- */
+html[lang="ar"] {
+  direction: rtl !important;
+}
