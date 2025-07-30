@@ -8,8 +8,8 @@ title: "دفتر الحكايات"
 title_separator: "-"
 name: "عدلي رغدة"
 description: "مدونة قصص ومقالات تعليمية"
-url: "https://your-username.github.io" # <-- مهم: غيّر هذا إلى رابط موقعك
-baseurl: "" # <-- مهم: اتركه فارغاً إذا كان هذا مستودع المستخدم الخاص بك، أو ضع "/repo-name"
+url: "https://djameldidin.github.io"
+baseurl: "/minimal-mistakes"
 
 # Navigation
 masthead_title: "دفتر الحكايات"
@@ -26,7 +26,7 @@ author:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/your-username" # <-- عدّل هذا
+      url: "https://github.com/djameldidin"
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:raghdachaimaa@gmail.com"
@@ -36,7 +36,7 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/your-username" # <-- عدّل هذا
+      url: "https://github.com/djameldidin"
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:raghdachaimaa@gmail.com"
