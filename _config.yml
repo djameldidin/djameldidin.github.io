@@ -16,8 +16,6 @@ masthead_title: "دفتر الحكايات"
 breadcrumbs: true
 words_per_minute: 200
 enable_copy_code_button: true
-
-# <-- هذا السطر الفارغ جيد للترتيب
 masthead_links:
   - title: "الرئيسية"
     url: /
@@ -26,16 +24,17 @@ masthead_links:
   - title: "عن الكاتب"
     url: /about/
 
+# Author Info
 author:
   name: "عدلي رغدة"
-  avatar: "" # هنا تضع رابط صورتك الشخصية لتظهر في الدائرة
+  avatar: ""
   bio: "كاتبة قصص ومقالات تعليمية تهتم بنشر المعرفة بأسلوب مبسط."
   location: "الجزائر"
   links:
-    - label: "حسابي على GitHub" # <-- عدّل هذا
+    - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/djameldidin"
-    - label: "راسلني عبر الإيميل" # <-- وعدّل هذا
+    - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:raghdachaimaa@gmail.com"
 
