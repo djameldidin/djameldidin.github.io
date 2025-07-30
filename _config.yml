@@ -9,7 +9,7 @@ title_separator: "-"
 name: "عدلي رغدة"
 description: "مدونة قصص ومقالات تعليمية"
 url: ""
-baseurl: "/raghda-chaima"
+baseurl: "/minimal-mistakes"
 # Navigation
 masthead_title: "دفتر الحكايات"
 breadcrumbs: true
