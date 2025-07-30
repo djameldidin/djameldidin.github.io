@@ -17,17 +17,25 @@ breadcrumbs: true
 words_per_minute: 200
 enable_copy_code_button: true
 
-# Author Info
+# <-- هذا السطر الفارغ جيد للترتيب
+masthead_links:
+  - title: "الرئيسية"
+    url: /
+  - title: "المقالات"
+    url: /year-archive/
+  - title: "عن الكاتب"
+    url: /about/
+
 author:
   name: "عدلي رغدة"
-  avatar: "" # يمكنك وضع رابط لصورتك هنا
+  avatar: "" # هنا تضع رابط صورتك الشخصية لتظهر في الدائرة
   bio: "كاتبة قصص ومقالات تعليمية تهتم بنشر المعرفة بأسلوب مبسط."
   location: "الجزائر"
   links:
-    - label: "GitHub"
+    - label: "حسابي على GitHub" # <-- عدّل هذا
       icon: "fab fa-fw fa-github"
       url: "https://github.com/djameldidin"
-    - label: "Email"
+    - label: "راسلني عبر الإيميل" # <-- وعدّل هذا
       icon: "fas fa-fw fa-envelope"
       url: "mailto:raghdachaimaa@gmail.com"
 
