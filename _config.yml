@@ -1,53 +1,60 @@
 # Theme Settings
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "default"
+
 # Site Settings
 locale: "ar"
-rtl: true
 title: "دفتر الحكايات"
 title_separator: "-"
 name: "عدلي رغدة"
 description: "مدونة قصص ومقالات تعليمية"
-url: ""
-baseurl: "/minimal-mistakes"
+url: "https://your-username.github.io" # <-- مهم: غيّر هذا إلى رابط موقعك
+baseurl: "" # <-- مهم: اتركه فارغاً إذا كان هذا مستودع المستخدم الخاص بك، أو ضع "/repo-name"
+
 # Navigation
 masthead_title: "دفتر الحكايات"
 breadcrumbs: true
 words_per_minute: 200
 enable_copy_code_button: true
+
 # Author Info
 author:
   name: "عدلي رغدة"
-  avatar: ""
+  avatar: "" # يمكنك وضع رابط لصورتك هنا
   bio: "كاتبة قصص ومقالات تعليمية تهتم بنشر المعرفة بأسلوب مبسط."
   location: "الجزائر"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/minimal-mistakes"
+      url: "https://github.com/your-username" # <-- عدّل هذا
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:raghdachaimaa@gmail.com"
+
 # Footer Links
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/minimal-mistakes"
+      url: "https://github.com/your-username" # <-- عدّل هذا
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:raghdachaimaa@gmail.com"
   since: "2025"
+
 # Comments
 comments:
   provider: false
+
 # SEO
 google_site_verification: ""
 bing_site_verification: ""
+
 # Search
 search: true
 search_full_content: false
 search_provider: lunr
+
 # Plugins
 plugins:
   - jekyll-remote-theme
@@ -56,9 +63,11 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+
 # Pagination
 paginate: 5
 paginate_path: /page:num/
+
 # Category and Tag Archives
 category_archive:
   type: liquid
@@ -66,6 +75,7 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
 # Markdown & Syntax Highlighting
 markdown: kramdown
 highlighter: rouge
@@ -75,15 +85,18 @@ kramdown:
   auto_ids: true
   entity_output: as_char
   toc_levels: 1..6
+
 # Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed
+
 # HTML Compression
 compress_html:
   clippings: all
   ignore:
     envs: development
+
 # Defaults for Posts
 defaults:
   - scope:
@@ -96,6 +109,7 @@ defaults:
       comments: false
       share: true
       related: true
+
 # Include & Exclude
 include:
   - .htaccess
@@ -117,6 +131,8 @@ exclude:
   - /docs
   - /test
   - tmp
+
+# General Settings
 keep_files:
   - .git
   - .svn
