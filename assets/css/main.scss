@@ -10,4 +10,23 @@
 /* --- أضف الكود التالي هنا --- */
 html[lang="ar"] {
   direction: rtl !important;
+  text-align: right;
 }
+
+body {
+  font-family: 'Tajawal', 'Cairo', sans-serif;
+}
+
+.site-nav, .page__content, nav, ul, ol {
+  text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+  text-align: right;
+}
+
+/* لعكس اتجاه العناصر المرنة */
+nav, .site-nav, .greedy-nav {
+  flex-direction: row-reverse;
+}
+
