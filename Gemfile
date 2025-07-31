@@ -1,6 +1,10 @@
+# Use RubyGems as the source for gems
 source "https://rubygems.org"
 
-# Use the github-pages gem to install all the dependencies needed for
-# a Jekyll site on platforms like GitHub Pages and Netlify.
-# This ensures versions are compatible.
+# This gem bundle includes Jekyll and all the plugins used by GitHub Pages.
+# Using it ensures compatibility when deploying to services like Netlify.
 gem "github-pages", "~> 230", group: :jekyll_plugins
+
+# Although github-pages includes this, some build environments like Netlify's
+# might need it to be listed explicitly to resolve dependencies correctly.
+gem "jekyll-remote-theme"
