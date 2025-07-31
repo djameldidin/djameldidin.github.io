@@ -1,15 +1,28 @@
-# Site Settings
+#===========================================================
+# SITE SETTINGS
+#===========================================================
+
+# Site settings
 locale: "ar"
 title: "دفتر الحكايات"
 description: "مدونة قصص ومقالات تعليمية"
 url: "https://djameldidin.github.io"
 baseurl: "/minimal-mistakes"
+repository: "djameldidin/minimal-mistakes"
 
-# Theme Settings
+#===========================================================
+# THEME SETTINGS
+#===========================================================
+
+# Theme settings
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "default"
 
-# Author Info
+#===========================================================
+# AUTHOR SETTINGS
+#===========================================================
+
+# Author settings
 author:
   name: "عدلي رغدة"
   avatar: ""
@@ -23,15 +36,44 @@ author:
       icon: "fas fa-fw fa-envelope"
       url: "mailto:raghdachaimaa@gmail.com"
 
-# Site Navigation
+#===========================================================
+# NAVIGATION
+#===========================================================
+
+# Site navigation
 masthead_links:
   - title: "الرئيسية"
     url: /
   - title: "المقالات"
     url: /year-archive/
+  - title: "التصنيفات"
+    url: /categories/
   - title: "عن الكاتب"
     url: /about/
 
-# Other settings
+#===========================================================
+# PLUGINS & DEFAULTS
+#===========================================================
+
+# Plugins
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
   - jekyll-remote-theme
+
+# Paginate
+paginate: 5
+paginate_path: "/page:num/"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
