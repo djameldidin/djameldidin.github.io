@@ -1,3 +1,10 @@
+# -----------------------------------------------------------------------------
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that.
+# -----------------------------------------------------------------------------
+
 # Theme Settings
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "default"
@@ -8,26 +15,13 @@ title: "دفتر الحكايات"
 title_separator: "-"
 name: "عدلي رغدة"
 description: "مدونة قصص ومقالات تعليمية"
-url: "https://djameldidin.github.io"
+url: "https://djameldidin.github.io" # Or your Netlify URL
 baseurl: "/minimal-mistakes"
-
-# Navigation
-masthead_title: "دفتر الحكايات"
-breadcrumbs: true
-words_per_minute: 200
-enable_copy_code_button: true
-masthead_links:
-  - title: "الرئيسية"
-    url: /
-  - title: "المقالات"
-    url: /year-archive/
-  - title: "عن الكاتب"
-    url: /about/
 
 # Author Info
 author:
   name: "عدلي رغدة"
-  avatar: ""
+  avatar: "" # Add a URL to your photo here
   bio: "كاتبة قصص ومقالات تعليمية تهتم بنشر المعرفة بأسلوب مبسط."
   location: "الجزائر"
   links:
@@ -38,6 +32,17 @@ author:
       icon: "fas fa-fw fa-envelope"
       url: "mailto:raghdachaimaa@gmail.com"
 
+# Site Navigation
+masthead_links:
+  - title: "الرئيسية"
+    url: /
+  - title: "المقالات"
+    url: /year-archive/
+  - title: "التصنيفات"
+    url: /categories/
+  - title: "عن الكاتب"
+    url: /about/
+
 # Footer Links
 footer:
   links:
@@ -47,22 +52,8 @@ footer:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:raghdachaimaa@gmail.com"
-  since: "2025"
 
-# Comments
-comments:
-  provider: false
-
-# SEO
-google_site_verification: ""
-bing_site_verification: ""
-
-# Search
-search: true
-search_full_content: false
-search_provider: lunr
-
-# Plugins
+# Other Settings
 plugins:
   - jekyll-remote-theme
   - jekyll-paginate
@@ -71,40 +62,10 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
-# Pagination
 paginate: 5
-paginate_path: /page:num/
+paginate_path: "/page:num/"
 
-# Category and Tag Archives
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-
-# Markdown & Syntax Highlighting
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  entity_output: as_char
-  toc_levels: 1..6
-
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed
-
-# HTML Compression
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
-# Defaults for Posts
+# Defaults for posts
 defaults:
   - scope:
       path: ""
@@ -113,37 +74,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: false
+      comments: true
       share: true
       related: true
-
-# Include & Exclude
-include:
-  - .htaccess
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - node_modules
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - package.json
-  - package-lock.json
-  - Rakefile
-  - /docs
-  - /test
-  - tmp
-
-# General Settings
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-permalink: /:categories/:title/
-timezone: Africa/Algiers
