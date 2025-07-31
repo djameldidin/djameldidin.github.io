@@ -77,3 +77,5 @@ defaults:
       author_profile: true
       read_time: true
       share: true
+# Forcing a full site rebuild
+     
