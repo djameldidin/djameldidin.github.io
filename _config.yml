@@ -1,27 +1,18 @@
-# -----------------------------------------------------------------------------
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that.
-# -----------------------------------------------------------------------------
+# Site Settings
+locale: "ar"
+title: "دفتر الحكايات"
+description: "مدونة قصص ومقالات تعليمية"
+url: "https://djameldidin.github.io"
+baseurl: "/minimal-mistakes"
 
 # Theme Settings
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "default"
 
-# Site Settings
-locale: "ar"
-title: "دفتر الحكايات"
-title_separator: "-"
-name: "عدلي رغدة"
-description: "مدونة قصص ومقالات تعليمية"
-url: "https://djameldidin.github.io" # Or your Netlify URL
-baseurl: "/minimal-mistakes"
-
 # Author Info
 author:
   name: "عدلي رغدة"
-  avatar: "" # Add a URL to your photo here
+  avatar: ""
   bio: "كاتبة قصص ومقالات تعليمية تهتم بنشر المعرفة بأسلوب مبسط."
   location: "الجزائر"
   links:
@@ -38,42 +29,9 @@ masthead_links:
     url: /
   - title: "المقالات"
     url: /year-archive/
-  - title: "التصنيفات"
-    url: /categories/
   - title: "عن الكاتب"
     url: /about/
 
-# Footer Links
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/djameldidin"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope"
-      url: "mailto:raghdachaimaa@gmail.com"
-
-# Other Settings
+# Other settings
 plugins:
   - jekyll-remote-theme
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
-
-paginate: 5
-paginate_path: "/page:num/"
-
-# Defaults for posts
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
