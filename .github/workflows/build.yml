@@ -34,4 +34,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_site
         publish_branch: gh-pages
-        force_orphan: true  # This سيجعل gh-pages يعيد إنشاء الفرع من الصفر
+        cname: djameldidin.github.io  # <-- مهم لدعم النطاق الصحيح
+        force_orphan: true            # <-- يجعل الفرع يبدأ من الصفر كل مرة
