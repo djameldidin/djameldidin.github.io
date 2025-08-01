@@ -3,7 +3,8 @@ name: Build and Deploy Jekyll Site to GitHub Pages
 on:
   push:
     branches:
-      - master  # أو main إذا كان اسم الفرع مختلفاً
+      - master
+  workflow_dispatch: {}
 
 jobs:
   build-deploy:
