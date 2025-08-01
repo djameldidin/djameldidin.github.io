@@ -25,3 +25,38 @@
   }
 </style>
 
+<style>
+  html[lang="ar"] ol,
+  html[lang="ar"] ul {
+    direction: rtl;
+    text-align: right;
+    padding-right: 2rem;
+    padding-left: 0 !important;
+    list-style-position: inside;
+  }
+
+  html[lang="ar"] ol li,
+  html[lang="ar"] ul li {
+    direction: rtl;
+    text-align: right;
+  }
+
+  html[lang="ar"] ol {
+    counter-reset: arabic-counter;
+  }
+
+  html[lang="ar"] ol li {
+    counter-increment: arabic-counter;
+    list-style: none;
+    position: relative;
+  }
+
+  html[lang="ar"] ol li::before {
+    content: counter(arabic-counter) ". ";
+    position: relative;
+    margin-left: 0.5em;
+    font-weight: bold;
+  }
+</style>
+
+
