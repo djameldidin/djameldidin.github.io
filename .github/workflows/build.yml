@@ -11,20 +11,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.1
+        ruby-version: 3.2
 
-    - name: Install Bundler & Jekyll dependencies
+    - name: Install Bundler & Dependencies
       run: |
         gem install bundler
         bundle install
 
-    - name: Build the Jekyll site
+    - name: Build Jekyll Site
       run: bundle exec jekyll build
 
     - name: Deploy to GitHub Pages
