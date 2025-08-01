@@ -82,8 +82,8 @@ defaults:
       read_time: true
       share: true
 # Forcing a full site rebuild
-# هذا مجرد تعليق لتشغيل الـ Workflow
-# تشغيل أول Build لـ gh-pages
+# Force rebuild to create gh-pages branch
+
 
 
      
