@@ -82,4 +82,6 @@ defaults:
       read_time: true
       share: true
 # Forcing a full site rebuild
+# تعديل بسيط لتشغيل GitHub Actions
+
      
