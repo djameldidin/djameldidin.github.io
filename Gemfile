@@ -1,15 +1,4 @@
-### Gemfile
-source "https://rubygems.org"
 
-# Use GitHub Pages gem to manage Jekyll and its dependencies
-gem "github-pages", "~> 230", group: :jekyll_plugins
-
-# Additional plugins
-gem "jekyll-include-cache"
-gem "jekyll-remote-theme"
-gem "csv"
-
-### .github/workflows/build.yml
 name: Build and Deploy Jekyll Site to GitHub Pages
 
 on:
