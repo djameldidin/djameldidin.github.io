@@ -5114,27 +5114,35 @@ body {
     height: 1px !important;
   }
 }
-/* --- أضف الكود التالي هنا --- */
+/* --- RTL adjustments --- */
 html[lang=ar] {
   direction: rtl !important;
   text-align: right;
 }
 
 body {
-  font-family: "Tajawal", "Cairo", sans-serif;
+  font-family: "Tajawal", "Cairo", sans-serif !important;
 }
 
-.site-nav, .page__content, nav, ul, ol {
+/* Force RTL on all elements */
+* {
+  direction: rtl !important;
   text-align: right;
 }
 
-h1, h2, h3, h4, h5, h6, p, li {
+/* Flex items: reverse direction */
+nav, .site-nav, .greedy-nav, .nav__list, .author__urls {
+  flex-direction: row-reverse !important;
+}
+
+/* Ensure list items are aligned right */
+ul, ol, li {
   text-align: right;
 }
 
-/* لعكس اتجاه العناصر المرنة */
-nav, .site-nav, .greedy-nav {
-  flex-direction: row-reverse;
+/* Headings */
+h1, h2, h3, h4, h5, h6, p {
+  text-align: right;
 }
 
 /*# sourceMappingURL=main.css.map */
