@@ -71,6 +71,9 @@ plugins:
 paginate: 5
 paginate_path: "/page:num/"
 
+# To allow posts with future dates to be published
+future: true
+
 # Defaults
 defaults:
   - scope:
