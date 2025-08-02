@@ -1,8 +1,54 @@
+### Gemfile
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3.2"
+# Use GitHub Pages gem to manage Jekyll and its dependencies
+gem "github-pages", "~> 230", group: :jekyll_plugins
+
+# Additional plugins
 gem "jekyll-include-cache"
 gem "jekyll-remote-theme"
 gem "csv"
 
+### .github/workflows/build.yml
+name: Build and Deploy Jekyll Site to GitHub Pages
 
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository content
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: Cache Ruby gems
+        uses: actions/cache@v4
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+
+      - name: Install dependencies
+        run: |
+          bundle config set path 'vendor/bundle'
+          bundle install --jobs 4 --retry 3
+
+      - name: Build the site with Jekyll
+        run: |
+          bundle exec jekyll build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
