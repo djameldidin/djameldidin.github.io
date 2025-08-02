@@ -2,19 +2,17 @@
 # SITE SETTINGS
 #===========================================================
 
-# Site settings
 locale: "ar"
 title: "دفتر الحكايات"
 description: "مدونة قصص ومقالات تعليمية"
 url: "https://djameldidin.github.io"
-baseurl: ""
+baseurl: ""  # موقع رئيسي، لا تضع مسار فرعي
 repository: "djameldidin/djameldidin.github.io"
 
 #===========================================================
 # THEME SETTINGS
 #===========================================================
 
-# Theme settings
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "air"
 header:
@@ -25,64 +23,7 @@ header:
 # AUTHOR SETTINGS
 #===========================================================
 
-# Author settings
 author:
   name: "عدلي رغدة"
   avatar: ""
-  bio: "كاتبة قصص ومقالات تعليمية تهتم بنشر المعرفة بأسلوب مبسط."
-  location: "الجزائر"
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/djameldidin"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope"
-      url: "mailto:raghdachaimaa@gmail.com"
-
-#===========================================================
-# NAVIGATION
-#===========================================================
-
-# Site navigation
-masthead_links:
-  - title: "الرئيسية"
-    url: /
-  - title: "المقالات"
-    url: /year-archive/
-  - title: "التصنيفات"
-    url: /categories/
-  - title: "عن الكاتب"
-    url: /about/
-
-#===========================================================
-# PLUGINS & DEFAULTS
-#===========================================================
-
-# Plugins
-plugins:
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-remote-theme
-  - jekyll-include-cache
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      share: true
-# Forcing a full site rebuild
-# Trigger build workflow manually
-# Trigger GitHub Actions Build
-
-
-
-
-
-
-     
+  bio: "كاتبة قصص و
