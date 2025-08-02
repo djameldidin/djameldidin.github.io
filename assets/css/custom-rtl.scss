@@ -1,0 +1,18 @@
+
+/* اتجاه RTL للتصنيفات والأرشيف */
+.page__content .taxonomy__index,
+.page__content .archive__item {
+  direction: rtl;
+  text-align: right;
+}
+
+.taxonomy__index a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* عناوين التصنيفات والأرشيف */
+h1, h2, h3, h4, h5, h6 {
+  text-align: right;
+}
+
