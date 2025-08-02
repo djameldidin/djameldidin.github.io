@@ -1,7 +1,25 @@
 ---
-layout: archive
+layout: default
 ---
 
-{{ content }}
+<div id="main" role="main">
+  <div class="archive">
+    <h1 class="page__title" lang="ar">{{ page.title }}</h1>
 
-{% include posts-taxonomy.html taxonomies=site.categories %}
+    {% assign sorted_categories = site.categories | sort %}
+
+    {% for category in sorted_categories %}
+      <h2 id="{{ category[0] }}">{{ category[0] }}</h2>
+      <ul>
+        {% for post in category[1] %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="post-date">({{ post.date | date: "%d-%m-%Y" }})</span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+
+  </div>
+</div>
+
