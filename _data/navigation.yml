@@ -1,0 +1,12 @@
+main:
+  - title: "الرئيسية"
+    url: /
+  - title: "المقالات"
+    url: /year-archive/
+  - title: "التصنيفات"
+    url: /categories/
+  - title: "عن الكاتب"
+    url: /about/
+  - title: "الأدوات المجانية"
+    url: /free-tools/
+
