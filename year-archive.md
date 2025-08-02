@@ -1,7 +1,7 @@
 ---
-layout: archive
+layout: year-archive
 title: "أرشيف المقالات"
-permalink: /archive/
+permalink: /year-archive/
 author_profile: false
 ---
 
