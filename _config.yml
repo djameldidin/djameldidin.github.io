@@ -88,6 +88,11 @@ defaults:
       path: ""
     values:
       layout: null
+    sass:
+      load_paths:
+       - _sass
+       - assets/css
+
 # Forcing a full site rebuild
 # Trigger build workflow manually
 # Trigger GitHub Actions Build
