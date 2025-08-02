@@ -2,19 +2,17 @@
 # SITE SETTINGS
 #===========================================================
 
-# Site settings
 locale: "ar"
 title: "دفتر الحكايات"
 description: "مدونة قصص ومقالات تعليمية"
 url: "https://djameldidin.github.io"
 baseurl: ""
-rrepository: "djameldidin/djameldidin.github.io"
+repository: "djameldidin/djameldidin.github.io"
 
 #===========================================================
 # THEME SETTINGS
 #===========================================================
 
-# Theme settings
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "air"
 header:
@@ -25,7 +23,6 @@ header:
 # AUTHOR SETTINGS
 #===========================================================
 
-# Author settings
 author:
   name: "عدلي رغدة"
   avatar: ""
@@ -43,7 +40,6 @@ author:
 # NAVIGATION
 #===========================================================
 
-# Site navigation
 masthead_links:
   - title: "الرئيسية"
     url: /
@@ -58,7 +54,6 @@ masthead_links:
 # PLUGINS & DEFAULTS
 #===========================================================
 
-# Plugins
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -67,12 +62,18 @@ plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
 
-# Paginate
 paginate: 5
 paginate_path: "/page:num/"
-
-# To allow posts with future dates to be published
 future: true
+
+# Archive Settings
+category_archive:
+  type: liquid
+  path: /categories/
+
+tag_archive:
+  type: liquid
+  path: /tags/
 
 # Defaults
 defaults:
@@ -88,18 +89,3 @@ defaults:
       path: ""
     values:
       layout: null
-    sass:
-      load_paths:
-       - _sass
-       - assets/css
-
-# Forcing a full site rebuild
-# Trigger build workflow manually
-# Trigger GitHub Actions Build
-
-
-
-
-
-
-     
