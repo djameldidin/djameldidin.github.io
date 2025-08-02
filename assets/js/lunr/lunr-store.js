@@ -1,84 +1,19 @@
----
-layout: none
----
-
-var store = [
-  {%- for c in site.collections -%}
-    {%- if forloop.last -%}
-      {%- assign l = true -%}
-    {%- endif -%}
-    {%- assign docs = c.docs | where_exp:'doc','doc.search != false' -%}
-    {%- for doc in docs -%}
-      {%- if doc.header.teaser -%}
-        {%- capture teaser -%}{{ doc.header.teaser }}{%- endcapture -%}
-      {%- else -%}
-        {%- assign teaser = site.teaser -%}
-      {%- endif -%}
-      {
-        "title": {{ doc.title | jsonify }},
-        "excerpt":
-          {%- if site.search_full_content == true -%}
-            {{ doc.content | newline_to_br |
-              replace:"<br />", " " |
-              replace:"</p>", " " |
-              replace:"</h1>", " " |
-              replace:"</h2>", " " |
-              replace:"</h3>", " " |
-              replace:"</h4>", " " |
-              replace:"</h5>", " " |
-              replace:"</h6>", " "|
-            strip_html | strip_newlines | jsonify }},
-          {%- else -%}
-            {{ doc.content | newline_to_br |
-              replace:"<br />", " " |
-              replace:"</p>", " " |
-              replace:"</h1>", " " |
-              replace:"</h2>", " " |
-              replace:"</h3>", " " |
-              replace:"</h4>", " " |
-              replace:"</h5>", " " |
-              replace:"</h6>", " "|
-            strip_html | strip_newlines | truncatewords: 50 | jsonify }},
-          {%- endif -%}
-        "categories": {{ doc.categories | jsonify }},
-        "tags": {{ doc.tags | jsonify }},
-        "url": {{ doc.url | relative_url | jsonify }},
-        "teaser": {{ teaser | relative_url | jsonify }}
-      }{%- unless forloop.last and l -%},{%- endunless -%}
-    {%- endfor -%}
-  {%- endfor -%}{%- if site.lunr.search_within_pages -%},
-  {%- assign pages = site.pages | where_exp: 'doc', 'doc.search != false' | where_exp: 'doc', 'doc.title != null' -%}
-  {%- for doc in pages -%}
-    {%- if forloop.last -%}
-      {%- assign l = true -%}
-    {%- endif -%}
-  {
-    "title": {{ doc.title | jsonify }},
-    "excerpt":
-        {%- if site.search_full_content == true -%}
-          {{ doc.content | newline_to_br |
-            replace:"<br />", " " |
-            replace:"</p>", " " |
-            replace:"</h1>", " " |
-            replace:"</h2>", " " |
-            replace:"</h3>", " " |
-            replace:"</h4>", " " |
-            replace:"</h5>", " " |
-            replace:"</h6>", " "|
-          strip_html | strip_newlines | jsonify }},
-        {%- else -%}
-          {{ doc.content | newline_to_br |
-            replace:"<br />", " " |
-            replace:"</p>", " " |
-            replace:"</h1>", " " |
-            replace:"</h2>", " " |
-            replace:"</h3>", " " |
-            replace:"</h4>", " " |
-            replace:"</h5>", " " |
-            replace:"</h6>", " "|
-          strip_html | strip_newlines | truncatewords: 50 | jsonify }},
-        {%- endif -%}
-      "url": {{ doc.url | absolute_url | jsonify }}
-  }{%- unless forloop.last and l -%},{%- endunless -%}
-  {%- endfor -%}
-{%- endif -%}]
+var store = [{
+        "title": "كيف تحفّز طفلك على القراءة بطرق ممتعة؟",
+        "excerpt":"القراءة ليست مجرد مهارة دراسية، بل هي بوابة لعالم واسع من الخيال والمعرفة. ومع ذلك، يجد الكثير من الآباء صعوبة في تحفيز أطفالهم على القراءة. في هذا المقال، سنستعرض طرقاً ممتعة وسهلة لجعل القراءة تجربة محببة للأطفال: 1. اختيار كتب تناسب اهتمامات الطفل ابحث عن مواضيع يحبها طفلك (ديناصورات، فضاء،...","categories": ["تربية","أطفال"],
+        "tags": ["القراءة","التربية","تطوير الذات"],
+        "url": "/minimal-mistakes/%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9/%D8%A3%D8%B7%D9%81%D8%A7%D9%84/2025/07/30/comment-motiver-enfant-lecture.html",
+        "teaser": null
+      },{
+        "title": "5 أفكار تجعل القراءة محببة للأطفال",
+        "excerpt":"القراءة ليست مجرد مهارة تعليمية، بل هي مفتاح لعالم من الخيال والمعرفة. إليك 5 أفكار بسيطة تجعل طفلك يحب القراءة بشغف: 1. اختيار كتب تناسب اهتمامات الطفل ابحث عن مواضيع يحبها طفلك (ديناصورات، فضاء، قصص مغامرات…). كلما شعر الطفل أن الكتاب يعكس اهتماماته، زادت رغبته في قراءته. 2. خلق “زاوية...","categories": ["التربية الإيجابية","تنمية مهارات الأطفال"],
+        "tags": ["القراءة","تربية","أطفال"],
+        "url": "/minimal-mistakes/%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A5%D9%8A%D8%AC%D8%A7%D8%A8%D9%8A%D8%A9/%D8%AA%D9%86%D9%85%D9%8A%D8%A9%20%D9%85%D9%87%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84/2025/08/01/reading-tips-for-kids.html",
+        "teaser": null
+      },{
+        "title": "الدليل الكامل للتربية الإيجابية: خطوات عملية لآباء المستقبل",
+        "excerpt":"التربية الإيجابية ليست مجرد شعارات جميلة، بل هي أسلوب حياة يعزز من استقلالية الطفل وثقته بنفسه. في هذا الدليل سنأخذك في رحلة عملية لفهم مبادئ التربية الواعية وتطبيقها في المواقف اليومية. 🗂️ فهرس المحتويات: ماذا تعني التربية الإيجابية؟ لماذا هي الخيار الأفضل لطفلك؟ 5 خطوات عملية لتطبيق التربية الإيجابية أخطاء...","categories": ["التربية الإيجابية","دليل تربوي"],
+        "tags": ["تربية","أطفال","سلوك","إرشادات"],
+        "url": "/minimal-mistakes/%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A5%D9%8A%D8%AC%D8%A7%D8%A8%D9%8A%D8%A9/%D8%AF%D9%84%D9%8A%D9%84%20%D8%AA%D8%B1%D8%A8%D9%88%D9%8A/2025/08/05/positive-parenting-guide.html",
+        "teaser": null
+      }]
