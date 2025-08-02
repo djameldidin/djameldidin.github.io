@@ -7,7 +7,7 @@ locale: "ar"
 title: "دفتر الحكايات"
 description: "مدونة قصص ومقالات تعليمية"
 url: "https://djameldidin.github.io"
-baseurl: "/minimal-mistakes"
+baseurl: ""
 repository: "djameldidin/minimal-mistakes"
 
 #===========================================================
