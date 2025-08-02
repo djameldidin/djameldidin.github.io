@@ -2,25 +2,24 @@
 layout: default
 ---
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% elsif page.header.video.id and page.header.video.provider %}
-  {% include page__hero_video.html %}
-{% endif %}
-
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
+{% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
 
 <div id="main" role="main">
-  {% include sidebar.html %}
-
   <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
-    {% endunless %}
-    {{ content }}
+    <h1 class="page__title" lang="ar">{{ page.title }}</h1>
+
+    {% for year in postsByYear %}
+      <h2>{{ year.name }}</h2>
+      <ul>
+        {% for post in year.items %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="post-date">({{ post.date | date: "%d-%m-%Y" }})</span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+
   </div>
 </div>
+
