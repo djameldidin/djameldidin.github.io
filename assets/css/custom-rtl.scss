@@ -1,18 +1,37 @@
 
-/* اتجاه RTL للتصنيفات والأرشيف */
-.page__content .taxonomy__index,
-.page__content .archive__item {
-  direction: rtl;
+/* تصحيح تنسيق صفحة التصنيفات */
+.archive h2 {
+  margin-top: 2rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
   text-align: right;
 }
 
-.taxonomy__index a {
-  display: inline-block;
-  margin-right: 10px;
+.archive ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* عناوين التصنيفات والأرشيف */
-h1, h2, h3, h4, h5, h6 {
+.archive ul li {
+  margin-bottom: 0.5rem;
   text-align: right;
 }
+
+.archive ul li a {
+  font-weight: bold;
+  color: #2b6cb0;
+  text-decoration: none;
+}
+
+.archive ul li a:hover {
+  text-decoration: underline;
+}
+
+.archive .post-date {
+  color: #718096;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
 
